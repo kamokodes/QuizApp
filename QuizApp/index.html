@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Celebrity</title>
+</head>
+<body>
+    <h1>Guess the Celebrity</h1>
+
+    <p>Who is this celebrity?</p>
+    <img src="{{ url_for('static', filename='celebrity.jpg') }}" alt="Celebrity Image" style="max-width: 300px;">
+
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="user_guess">Your Guess:</label>
+        <input type="text" id="user_guess" name="user_guess" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
